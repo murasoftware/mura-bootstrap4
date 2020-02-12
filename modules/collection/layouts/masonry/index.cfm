@@ -5,12 +5,14 @@
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
 	<cfparam name="objectParams.modalimages" default="false">
+	<cfparam name="objectParams.scrollpages" default="false">
 	<cfparam name="objectParams.bgStyle" default="">
 
 	<cfset imageSizeArgs={
 		size=objectParams.imageSize,
 		height=objectParams.imageHeight,
-		width=objectParams.imageWidth
+		width=objectParams.imageWidth,
+		scrollpages=objectParams.scrollpages
 	}>
 </cfsilent>
 <cfoutput>

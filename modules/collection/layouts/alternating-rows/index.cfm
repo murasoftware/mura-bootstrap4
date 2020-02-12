@@ -1,3 +1,5 @@
+
+<cfparam name="objectParams.scrollpages" default="false">
 <cfoutput>
 <div class="mura-collection">    
 <cfloop condition="iterator.hasNext()">
@@ -29,7 +31,8 @@
 	theFile='collection/includes/dsp_pagination.cfm',
 	iterator=iterator,
 	nextN=iterator.getNextN(),
-	source=objectParams.source
+	source=objectParams.source,
+  scrollpages=objectParams.scrollpages
 )#
 
 <cfif len(objectParams.viewalllink)>

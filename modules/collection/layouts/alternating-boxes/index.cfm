@@ -2,7 +2,8 @@
 	<cfparam name="objectParams.imageSize" default="medium">
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
-	<cfparam name="objectParams.modalimages" default="false">
+    <cfparam name="objectParams.modalimages" default="false">
+    <cfparam name="objectParams.scrollpages" default="false">
 
 	<cfset imageSizeArgs={
 		size=objectParams.imageSize,
@@ -44,7 +45,8 @@
       theFile='collection/includes/dsp_pagination.cfm',
       iterator=iterator,
       nextN=iterator.getNextN(),
-      source=objectParams.source
+      source=objectParams.source,
+      scrollpages=objectParams.scrollpages
   )#
   
   <cfif len(objectParams.viewalllink)>

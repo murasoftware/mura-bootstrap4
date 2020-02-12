@@ -7,3 +7,4 @@
 <cfparam name="objectparams.showPager" default="Yes">
 <cfparam name="objectparams.showCaption" default="Yes">
 <cfparam name="objectparams.cssID" default="myCarousel">
+<cfparam name="objectparams.scrollpages" default="false">
