@@ -32,7 +32,7 @@
 	iterator=iterator,
 	nextN=iterator.getNextN(),
 	source=objectParams.source,
-  scrollpages=objectParams.scrollpages
+	objectparams=objectParams
 )#
 
 <cfif len(objectParams.viewalllink)>

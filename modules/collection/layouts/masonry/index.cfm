@@ -11,8 +11,7 @@
 	<cfset imageSizeArgs={
 		size=objectParams.imageSize,
 		height=objectParams.imageHeight,
-		width=objectParams.imageWidth,
-		scrollpages=objectParams.scrollpages
+		width=objectParams.imageWidth
 	}>
 </cfsilent>
 <cfoutput>
@@ -51,7 +50,7 @@
 	theFile='collection/includes/dsp_pagination.cfm',
 	iterator=iterator,
 	nextN=iterator.getNextN(),
-	source=objectParams.source
+	objectparams=objectParams
 )#
 
 <cfif len(objectParams.viewalllink)>
