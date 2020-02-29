@@ -1,3 +1,6 @@
+//base spacing options
+
+//tight
 [data-objectspacing="tight"],
 .spacing-tight {
     padding: 1rem;
@@ -14,7 +17,7 @@
         padding: 1rem;
     }
 }
-
+//normal
 [data-objectspacing="normal"],
 .spacing-normal {
     padding: 2rem 1rem;
@@ -49,7 +52,7 @@
         }
     }
 }
-
+//loose
 [data-objectspacing="loose"],
 .spacing-loose {
     padding: 3rem 1rem;
