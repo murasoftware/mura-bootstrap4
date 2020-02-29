@@ -1,70 +1,110 @@
 [data-objectspacing="tight"],
-[data-metaspacing="tight"],
-[data-contentspacing="tight"],
-.spacing-tight{
+.spacing-tight {
     padding: 1rem;
 }
-[data-objectspacing="normal"],
-[data-metaspacing="normal"],
-[data-contentspacing="normal"],
-.spacing-normal{
-    padding: 2rem 1rem;
+[data-metaspacing="tight"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            padding: 1rem;
+        }
+    }
 }
-[data-objectspacing="loose"],
-[data-metaspacing="loose"],
-[data-contentspacing="loose"],
-.spacing-loose {
-    padding: 3rem 1rem;
-}
-
-@media (min-width: 768px) {
-    [data-objectspacing="tight"],
-    [data-metaspacing="tight"],
-    [data-contentspacing="tight"],
-    .spacing-tight {
+[data-contentspacing="tight"]{
+    > div.mura-object-content{
         padding: 1rem;
     }
+}
 
-    [data-objectspacing="normal"],
-    [data-metaspacing="normal"],
-    [data-contentspacing="normal"],
-    .spacing-normal {
+[data-objectspacing="normal"],
+.spacing-normal {
+    padding: 2rem 1rem;
+    @include media-breakpoint-up(md){
         padding: 2rem;
     }
-
-    [data-objectspacing="loose"],
-    [data-metaspacing="loose"],
-    [data-contentspacing="loose"],
-    .spacing-loose {
-        padding: 3rem;
+    @include media-breakpoint-up(lg){
+        padding: 2.5rem;
+    }
+}
+[data-contentspacing="normal"]{
+    > div.mura-object-content{
+        padding: 2rem 1rem;
+        @include media-breakpoint-up(md){
+            padding: 2rem;
+        }
+        @include media-breakpoint-up(lg){
+            padding: 2.5rem;
+        }
+    }
+}
+[data-metaspacing="normal"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            padding: 2rem 1rem;
+            @include media-breakpoint-up(md){
+                padding: 2rem;
+            }
+            @include media-breakpoint-up(lg){
+                padding: 2.5rem;
+            }
+        }
     }
 }
 
-@media (min-width: 992px) {
-    [data-objectspacing="normal"],
-    [data-metaspacing="normal"],
-    [data-contentspacing="normal"],
-    .spacing-normal{
-        padding: 2.5rem;
+[data-objectspacing="loose"],
+.spacing-loose {
+    padding: 3rem 1rem;
+    @include media-breakpoint-up(md){
+        padding: 3rem;
     }
-    
-    [data-objectspacing="loose"],
-    [data-metaspacing="loose"],
-    [data-contentspacing="loose"],
-    .spacing-loose{
+    @include media-breakpoint-up(lg){
         padding: 5rem;
+    }
+}
+[data-contentspacing="loose"]{
+    > div.mura-object-content{
+        padding: 3rem 1rem;
+        @include media-breakpoint-up(md){
+            padding: 3rem;
+        }
+        @include media-breakpoint-up(lg){
+            padding: 5rem;
+        }
+    }
+}
+[data-metaspacing="loose"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            padding: 3rem 1rem;
+            @include media-breakpoint-up(md){
+                padding: 3rem;
+            }
+            @include media-breakpoint-up(lg){
+                padding: 5rem;
+            }
+        }
     }
 }
 
 //nested layout items
-@media(max-width:767px){
-    .mura-object .mura-object:not([data-objectname="Form"]){
+.mura-object .mura-object:not([data-objectname="Form"]){
+    @include media-breakpoint-down(sm){
         padding-left:0;
         padding-right:0;
         padding-bottom:0;
         padding-top:0;
         & + .mura-object{
             padding-top:0.5rem;
+        }
+    }
+}
+
+//nested containers need vertical separation on mobile devices
+div[data-object="container"]:not(.mura-objectclass){
+    div[data-object="container"]{
+        & + div[data-object="container"]{
+            @include media-breakpoint-down(sm){
+                margin-top:2rem;
+            }
         }
     }
 }
