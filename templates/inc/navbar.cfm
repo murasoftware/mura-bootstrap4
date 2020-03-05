@@ -31,7 +31,7 @@
 						, liHasKidsNestedClass=''
 						, aHasKidsClass='dropdown-toggle'
 						, aHasKidsAttributes=''
-						, aCurrentClass='nav-link active'
+						, aCurrentClass='nav-link'
 						, aCurrentAttributes=''
 						, ulNestedClass='dropdown-menu'
 						, ulNestedAttributes=''
