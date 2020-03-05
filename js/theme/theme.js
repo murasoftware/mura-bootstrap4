@@ -15,6 +15,15 @@ $(document).ready(function() {
 			scrollTop:0
 		}, 800);
 		return false;
-	});
+	});	
 
 });
+
+if($('#preloader').length > 0) {
+	$(window).on("load", function() {		
+		$('#preloader').fadeOut(500, function() {
+			$('#preloader').remove();
+		});
+		// setTimeout(function() {}, 1000); 	  
+	});
+}

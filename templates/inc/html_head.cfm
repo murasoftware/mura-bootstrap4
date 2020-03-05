@@ -59,3 +59,4 @@
 
 </head>
 </cfoutput>
+<cfinclude template="preloader.cfm">
