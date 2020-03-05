@@ -11,9 +11,13 @@
 
 	<title>#esapiEncode('html', Mura.content('HTMLTitle'))# - #esapiEncode('html', Mura.siteConfig('site'))#</title>
 
+	<!---Canonical URL--->
+	<cfset canonicalURL = len(Mura.content('canonicalURL')) ? Mura.content('canonicalURL') : Mura.getURL(complete='true')>
+	<link rel="canonical" href="#canonicalURL#"/>
+
 	<!--- Mura CMS Base Styles--->
 	<!--- Optional: Mura CMS Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
-	#Mura.outputMuraCSS(version="8", includeskin=true)#
+	#Mura.outputMuraCSS(version="10", includeskin=true)#
 
 	<!--- Bootstrap core CSS --->
 <!--- 	<link rel="stylesheet" href="#Mura.siteConfig('themeAssetPath')#/css/bootstrap.css"> --->
