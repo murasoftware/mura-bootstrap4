@@ -1,6 +1,4 @@
 //base spacing options
-
-//base spacing options
 $tight-padding: 1rem !default;
 $normal-padding: 2rem !default;
 $normal-padding-lg: 2.5rem !default;
@@ -27,34 +25,34 @@ $loose-padding-lg: 5rem !default;
 //normal
 [data-objectspacing="normal"],
 .spacing-normal {
-    padding: normal-padding $tight-padding;
+    padding: $normal-padding $tight-padding;
     @include media-breakpoint-up(md){
-        padding: normal-padding;
+        padding: $normal-padding;
     }
     @include media-breakpoint-up(lg){
-        padding: normal-padding-lg;
+        padding: $normal-padding-lg;
     }
 }
 [data-contentspacing="normal"]{
     > div.mura-object-content{
-        padding: normal-padding $tight-padding;
+        padding: $normal-padding $tight-padding;
         @include media-breakpoint-up(md){
-            padding: normal-padding;
+            padding: $normal-padding;
         }
         @include media-breakpoint-up(lg){
-            padding: normal-padding-lg;
+            padding: $normal-padding-lg;
         }
     }
 }
 [data-metaspacing="normal"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: normal-padding $tight-padding;
+            padding: $normal-padding $tight-padding;
             @include media-breakpoint-up(md){
-                padding: normal-padding;
+                padding: $normal-padding;
             }
             @include media-breakpoint-up(lg){
-                padding: normal-padding-lg;
+                padding: $normal-padding-lg;
             }
         }
     }
