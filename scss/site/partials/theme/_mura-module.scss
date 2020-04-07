@@ -291,7 +291,7 @@ div[data-object="container"]:not(.mura-objectclass){
                 margin-bottom:1rem;
             }
             .nav-link{
-                font-size:.8em;
+                font-size:1.6rem;
                 line-height:1.5;
                 padding-top:0;
                 padding-bottom:0;
@@ -309,7 +309,7 @@ div[data-object="container"]:not(.mura-objectclass){
                     display:none;
                 }
                 &.active{
-                    border-bottom:2px solid #8b8175;
+                    border-bottom:2px solid $blue;
                 }
             }
             + .nav-item{
