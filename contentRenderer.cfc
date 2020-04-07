@@ -98,6 +98,7 @@
         	{name="Purple",value="module-purple"},
         	{name="Blue",value="module-blue"},
 			{name="White",value="module-white"},
+			{name="Horizontal Nav",value="module-horizontal-nav"},
 			{name="Image Grid",value="module-image-grid"},
 			{name="Big Header",value="module-big-header"}
         ];

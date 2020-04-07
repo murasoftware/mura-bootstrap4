@@ -266,3 +266,58 @@ div[data-object="container"]:not(.mura-objectclass){
 .module-big-header{
     height:460px;
 }
+
+.module-horizontal-nav{
+    .svCatSummary{
+        h2{
+            display:none;
+        }
+    }
+    .nav{
+        flex-direction: row !important;
+        justify-content:center;
+        background-color:$white;
+        margin-bottom:0;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        .nav-item{
+            padding-left:3rem;
+            padding-right:3rem;
+            @include media-breakpoint-down(sm){
+                display:block;
+                border-left:0;
+                text-align:center;
+                width:100%;
+                margin-bottom:1rem;
+            }
+            .nav-link{
+                font-size:.8em;
+                line-height:1.5;
+                padding-top:0;
+                padding-bottom:0;
+                padding-left:0;
+                padding-right:0;
+                font-family:$font-family-sans-serif;
+                color:$black;
+                text-transform:uppercase;
+                font-weight:700;
+                letter-spacing:2px;
+                @include media-breakpoint-down(sm){
+                    display:inline-block;
+                }
+                span{
+                    display:none;
+                }
+                &.active{
+                    border-bottom:2px solid #8b8175;
+                }
+            }
+            + .nav-item{
+                border-left:1px solid $black;
+                @include media-breakpoint-down(sm){
+                    border-left:0;
+                }
+            }
+        }
+    }
+}
