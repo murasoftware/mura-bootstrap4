@@ -1,5 +1,8 @@
 .card{
     height:auto;
+    &.mura-collection-item__holder{
+        height:100%;
+    }
 }
 .card-img-right{
     img{
