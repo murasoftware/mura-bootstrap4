@@ -74,7 +74,12 @@
 		this.cookieConsentWidth="sm";
 
 		this.primaryContentTypes="Page,Folder,Link,File";
-		this.spacingoptions=[{name="Tight",value="tight"},{name="Normal",value="normal"},{name="Loose",value="loose"}];
+		this.spacingoptions=[{name="Tight",value="tight"}
+							,{name="Tight Vertical",value="tight-y"}
+							,{name="Normal",value="normal"}
+							,{name="Normal Vertical",value="normal-y"}
+							,{name="Loose",value="loose"}
+							,{name="Loose Vertical",value="loose-y"}];
 		this.modulethemeoptions=[
 			{name="Brand Default",value="module-brand"},
         	{name="Black",value="module-black"},

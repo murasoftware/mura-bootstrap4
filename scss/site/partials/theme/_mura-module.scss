@@ -1,53 +1,60 @@
 //base spacing options
 
+//base spacing options
+$tight-padding: 1rem !default;
+$normal-padding: 2rem !default;
+$normal-padding-lg: 2.5rem !default;
+$loose-padding: 3rem !default;
+$loose-padding-lg: 5rem !default;
+
 //tight
 [data-objectspacing="tight"],
 .spacing-tight {
-    padding: 1rem;
+    padding: $tight-padding;
 }
 [data-metaspacing="tight"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: 1rem;
+            padding: $tight-padding;
         }
     }
 }
 [data-contentspacing="tight"]{
     > div.mura-object-content{
-        padding: 1rem;
+        padding: $tight-padding;
     }
 }
 //normal
 [data-objectspacing="normal"],
 .spacing-normal {
-    padding: 2rem 1rem;
+    padding: normal-padding $tight-padding;
     @include media-breakpoint-up(md){
-        padding: 2rem;
+        padding: normal-padding;
     }
     @include media-breakpoint-up(lg){
-        padding: 2.5rem;
+        padding: normal-padding-lg;
     }
 }
 [data-contentspacing="normal"]{
     > div.mura-object-content{
-        padding: 2rem 1rem;
+        padding: normal-padding $tight-padding;
         @include media-breakpoint-up(md){
-            padding: 2rem;
+            padding: normal-padding;
         }
         @include media-breakpoint-up(lg){
-            padding: 2.5rem;
+            padding: normal-padding-lg;
         }
     }
 }
 [data-metaspacing="normal"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: 2rem 1rem;
+            padding: normal-padding $tight-padding;
             @include media-breakpoint-up(md){
-                padding: 2rem;
+                padding: normal-padding;
             }
             @include media-breakpoint-up(lg){
-                padding: 2.5rem;
+                padding: normal-padding-lg;
             }
         }
     }
@@ -55,34 +62,141 @@
 //loose
 [data-objectspacing="loose"],
 .spacing-loose {
-    padding: 3rem 1rem;
+    padding: $loose-padding $tight-padding;
     @include media-breakpoint-up(md){
-        padding: 3rem;
+        padding: $loose-padding;
     }
     @include media-breakpoint-up(lg){
-        padding: 5rem;
+        padding: $loose-padding-lg;
     }
 }
 [data-contentspacing="loose"]{
     > div.mura-object-content{
-        padding: 3rem 1rem;
+        padding: $loose-padding $tight-padding;
         @include media-breakpoint-up(md){
-            padding: 3rem;
+            padding: $loose-padding;
         }
         @include media-breakpoint-up(lg){
-            padding: 5rem;
+            padding: $loose-padding-lg;
         }
     }
 }
 [data-metaspacing="loose"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: 3rem 1rem;
+            padding: $loose-padding $tight-padding;
             @include media-breakpoint-up(md){
-                padding: 3rem;
+                padding: $loose-padding;
             }
             @include media-breakpoint-up(lg){
-                padding: 5rem;
+                padding: $loose-padding-lg;
+            }
+        }
+    }
+}
+
+//vertical spacing only
+//tight-y
+[data-objectspacing="tight-y"],
+.spacing-tight-y {
+    padding-top: $tight-padding;
+}
+[data-metaspacing="tight-y"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            padding: $tight-padding;
+        }
+    }
+}
+[data-contentspacing="tight-y"]{
+    > div.mura-object-content{
+        padding: $tight-padding;
+    }
+}
+//normal-y
+[data-objectspacing="normal-y"],
+.spacing-normal-y {
+    padding-top: $normal-padding;
+    padding-bottom: $normal-padding;
+    @include media-breakpoint-up(md){
+        padding-top: $normal-padding;
+        padding-bottom: $normal-padding;
+    }
+    @include media-breakpoint-up(lg){
+        padding-top: $normal-padding-lg;
+        padding-bottom: $normal-padding-lg;
+    }
+}
+[data-contentspacing="normal-y"]{
+    > div.mura-object-content{
+        padding-top: $normal-padding;
+        padding-bottom: $normal-padding;
+        @include media-breakpoint-up(md){
+            padding-top: $normal-padding;
+            padding-bottom: $normal-padding;
+        }
+        @include media-breakpoint-up(lg){
+            padding-top: $normal-padding-lg;
+            padding-bottom: $normal-padding-lg;
+        }
+    }
+}
+[data-metaspacing="normal-y"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            padding-top: $normal-padding;
+padding-bottom: $normal-padding;
+            @include media-breakpoint-up(md){
+                padding-top: $normal-padding;
+padding-bottom: $normal-padding;
+            }
+            @include media-breakpoint-up(lg){
+                padding-top: $normal-padding-lg;
+padding-bottom: $normal-padding-lg;
+            }
+        }
+    }
+}
+//loose-y
+[data-objectspacing="loose-y"],
+.spacing-loose-y {
+    padding-top: $loose-padding;
+    padding-bottom: $loose-padding;
+    @include media-breakpoint-up(md){
+        padding-top: $loose-padding;
+        padding-bottom: $loose-padding;
+    }
+    @include media-breakpoint-up(lg){
+        padding-top: $loose-padding-lg;
+        padding-bottom: $loose-padding-lg;
+    }
+}
+[data-contentspacing="loose-y"]{
+    > div.mura-object-content{
+        padding-top: $loose-padding;
+        padding-bottom: $loose-padding;
+        @include media-breakpoint-up(md){
+            padding-top: $loose-padding;
+            padding-bottom: $loose-padding;
+        }
+        @include media-breakpoint-up(lg){
+            padding-top: $loose-padding-lg;
+            padding-bottom: $loose-padding-lg;
+        }
+    }
+}
+[data-metaspacing="loose-y"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            padding-top: $loose-padding;
+            padding-bottom: $loose-padding;
+            @include media-breakpoint-up(md){
+                padding-top: $loose-padding;
+                padding-bottom: $loose-padding;
+            }
+            @include media-breakpoint-up(lg){
+                padding-top: $loose-padding-lg;
+                padding-bottom: $loose-padding-lg;
             }
         }
     }
