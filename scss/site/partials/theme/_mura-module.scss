@@ -1,10 +1,10 @@
 //base spacing options
-$tight-padding: 5rem !default;//MD breakpoint and down
-$tight-padding-lg: 5rem !default;//LG breakpoint and up
-$normal-padding: 10rem !default;//MD breakpoint and down
-$normal-padding-lg: 10rem !default;//LG breakpoint and up
-$loose-padding: 20rem !default;//MD breakpoint and down
-$loose-padding-lg: 20rem !default;//LG breakpoint and up
+$tight-padding: 1rem !default;//MD breakpoint and down
+$tight-padding-lg: 1rem !default;//LG breakpoint and up
+$normal-padding: 2rem !default;//MD breakpoint and down
+$normal-padding-lg: 2.5rem !default;//LG breakpoint and up
+$loose-padding: 3rem !default;//MD breakpoint and down
+$loose-padding-lg: 5rem !default;//LG breakpoint and up
 
 //tight
 [data-objectspacing="tight"],
