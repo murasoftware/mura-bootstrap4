@@ -76,10 +76,16 @@
 		this.primaryContentTypes="Page,Folder,Link,File";
 		this.spacingoptions=[{name="Tight",value="tight"}
 							,{name="Tight Vertical",value="tight-y"}
+							,{name="Tight Top",value="tight-top"}
+							,{name="Tight Bottom",value="tight-bottom"}
 							,{name="Normal",value="normal"}
 							,{name="Normal Vertical",value="normal-y"}
+							,{name="Normal Top",value="normal-top"}
+							,{name="Normal Bottom",value="normal-bottom"}
 							,{name="Loose",value="loose"}
-							,{name="Loose Vertical",value="loose-y"}];
+							,{name="Loose Vertical",value="loose-y"}
+							,{name="Loose Top",value="loose-top"}
+							,{name="Loose Bottom",value="loose-bottom"}];
 		this.modulethemeoptions=[
 			{name="Brand Default",value="module-brand"},
         	{name="Black",value="module-black"},
