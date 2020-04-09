@@ -66,3 +66,46 @@
 .footer-theme {
     @include footer-theme();
 }
+
+@mixin module-padding($padding-x, $padding-y, $padding-x-lg, $padding-y-lg){
+    padding: $padding-y $padding-x;
+    @include media-breakpoint-up(md){
+        padding: $padding-y;
+    }
+    @include media-breakpoint-up(lg){
+        padding: $padding-y-lg;
+    }
+}
+
+@mixin module-padding-y-only($padding-y, $padding-y-lg){
+    padding-top: $padding-y;
+    padding-bottom: $padding-y;
+    @include media-breakpoint-up(md){
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
+    }
+    @include media-breakpoint-up(lg){
+        padding-top: $padding-y-lg;
+        padding-bottom: $padding-y-lg;
+    }
+}
+
+@mixin module-padding-bottom-only($padding-bottom, $padding-bottom-lg){
+    padding-bottom: $padding-bottom;
+    @include media-breakpoint-up(md){
+        padding-bottom: $padding-bottom;
+    }
+    @include media-breakpoint-up(lg){
+        padding-bottom: $padding-bottom-lg;
+    }
+}
+
+@mixin module-padding-top-only($padding-top, $padding-top-lg){
+    padding-top: $padding-top;
+    @include media-breakpoint-up(md){
+        padding-top: $padding-top;
+    }
+    @include media-breakpoint-up(lg){
+        padding-top: $padding-top-lg;
+    }
+}

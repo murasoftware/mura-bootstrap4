@@ -1,94 +1,59 @@
 //base spacing options
-$tight-padding: 1rem !default;
-$normal-padding: 2rem !default;
-$normal-padding-lg: 2.5rem !default;
-$loose-padding: 3rem !default;
-$loose-padding-lg: 5rem !default;
+$tight-padding: 5rem !default;//MD breakpoint and down
+$tight-padding-lg: 5rem !default;//LG breakpoint and up
+$normal-padding: 10rem !default;//MD breakpoint and down
+$normal-padding-lg: 10rem !default;//LG breakpoint and up
+$loose-padding: 20rem !default;//MD breakpoint and down
+$loose-padding-lg: 20rem !default;//LG breakpoint and up
 
 //tight
 [data-objectspacing="tight"],
 .spacing-tight {
-    padding: $tight-padding;
+    @include module-padding($tight-padding, $tight-padding, $tight-padding-lg, $tight-padding-lg);
 }
 [data-metaspacing="tight"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: $tight-padding;
+            @include module-padding($tight-padding, $tight-padding, $tight-padding-lg, $tight-padding-lg);
         }
     }
 }
 [data-contentspacing="tight"]{
     > div.mura-object-content{
-        padding: $tight-padding;
+        @include module-padding($tight-padding, $tight-padding, $tight-padding-lg, $tight-padding-lg);
     }
 }
 //normal
 [data-objectspacing="normal"],
 .spacing-normal {
-    padding: $normal-padding $tight-padding;
-    @include media-breakpoint-up(md){
-        padding: $normal-padding;
-    }
-    @include media-breakpoint-up(lg){
-        padding: $normal-padding-lg;
-    }
+    @include module-padding($tight-padding, $normal-padding, $normal-padding-lg, $normal-padding-lg);
 }
 [data-contentspacing="normal"]{
     > div.mura-object-content{
-        padding: $normal-padding $tight-padding;
-        @include media-breakpoint-up(md){
-            padding: $normal-padding;
-        }
-        @include media-breakpoint-up(lg){
-            padding: $normal-padding-lg;
-        }
+        @include module-padding($tight-padding, $normal-padding, $normal-padding-lg, $normal-padding-lg);
     }
 }
 [data-metaspacing="normal"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: $normal-padding $tight-padding;
-            @include media-breakpoint-up(md){
-                padding: $normal-padding;
-            }
-            @include media-breakpoint-up(lg){
-                padding: $normal-padding-lg;
-            }
+            @include module-padding($tight-padding, $normal-padding, $normal-padding-lg, $normal-padding-lg);
         }
     }
 }
 //loose
 [data-objectspacing="loose"],
 .spacing-loose {
-    padding: $loose-padding $tight-padding;
-    @include media-breakpoint-up(md){
-        padding: $loose-padding;
-    }
-    @include media-breakpoint-up(lg){
-        padding: $loose-padding-lg;
-    }
+    @include module-padding($tight-padding, $loose-padding, $tight-padding-lg, $loose-padding-lg);
 }
 [data-contentspacing="loose"]{
     > div.mura-object-content{
-        padding: $loose-padding $tight-padding;
-        @include media-breakpoint-up(md){
-            padding: $loose-padding;
-        }
-        @include media-breakpoint-up(lg){
-            padding: $loose-padding-lg;
-        }
+        @include module-padding($tight-padding, $loose-padding, $tight-padding-lg, $loose-padding-lg);
     }
 }
 [data-metaspacing="loose"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: $loose-padding $tight-padding;
-            @include media-breakpoint-up(md){
-                padding: $loose-padding;
-            }
-            @include media-breakpoint-up(lg){
-                padding: $loose-padding-lg;
-            }
+            @include module-padding($tight-padding, $loose-padding, $tight-padding-lg, $loose-padding-lg);
         }
     }
 }
@@ -97,106 +62,180 @@ $loose-padding-lg: 5rem !default;
 //tight-y
 [data-objectspacing="tight-y"],
 .spacing-tight-y {
-    padding-top: $tight-padding;
+    @include module-padding-y-only($tight-padding, $tight-padding);
 }
 [data-metaspacing="tight-y"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding: $tight-padding;
+            @include module-padding-y-only($tight-padding, $tight-padding);
         }
     }
 }
 [data-contentspacing="tight-y"]{
     > div.mura-object-content{
-        padding: $tight-padding;
+        @include module-padding-y-only($tight-padding, $tight-padding);
     }
 }
 //normal-y
 [data-objectspacing="normal-y"],
 .spacing-normal-y {
-    padding-top: $normal-padding;
-    padding-bottom: $normal-padding;
-    @include media-breakpoint-up(md){
-        padding-top: $normal-padding;
-        padding-bottom: $normal-padding;
-    }
-    @include media-breakpoint-up(lg){
-        padding-top: $normal-padding-lg;
-        padding-bottom: $normal-padding-lg;
-    }
+    @include module-padding-y-only($normal-padding, $normal-padding-lg);
 }
 [data-contentspacing="normal-y"]{
     > div.mura-object-content{
-        padding-top: $normal-padding;
-        padding-bottom: $normal-padding;
-        @include media-breakpoint-up(md){
-            padding-top: $normal-padding;
-            padding-bottom: $normal-padding;
-        }
-        @include media-breakpoint-up(lg){
-            padding-top: $normal-padding-lg;
-            padding-bottom: $normal-padding-lg;
-        }
+        @include module-padding-y-only($normal-padding, $normal-padding-lg);
     }
 }
 [data-metaspacing="normal-y"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding-top: $normal-padding;
-padding-bottom: $normal-padding;
-            @include media-breakpoint-up(md){
-                padding-top: $normal-padding;
-padding-bottom: $normal-padding;
-            }
-            @include media-breakpoint-up(lg){
-                padding-top: $normal-padding-lg;
-padding-bottom: $normal-padding-lg;
-            }
+            @include module-padding-y-only($normal-padding, $normal-padding-lg);
         }
     }
 }
 //loose-y
 [data-objectspacing="loose-y"],
 .spacing-loose-y {
-    padding-top: $loose-padding;
-    padding-bottom: $loose-padding;
-    @include media-breakpoint-up(md){
-        padding-top: $loose-padding;
-        padding-bottom: $loose-padding;
-    }
-    @include media-breakpoint-up(lg){
-        padding-top: $loose-padding-lg;
-        padding-bottom: $loose-padding-lg;
-    }
+    @include module-padding-y-only($loose-padding, $loose-padding-lg);
 }
 [data-contentspacing="loose-y"]{
     > div.mura-object-content{
-        padding-top: $loose-padding;
-        padding-bottom: $loose-padding;
-        @include media-breakpoint-up(md){
-            padding-top: $loose-padding;
-            padding-bottom: $loose-padding;
-        }
-        @include media-breakpoint-up(lg){
-            padding-top: $loose-padding-lg;
-            padding-bottom: $loose-padding-lg;
-        }
+        @include module-padding-y-only($loose-padding, $loose-padding-lg);
     }
 }
 [data-metaspacing="loose-y"]{
     > div.mura-object-meta-wrapper{
         > div.mura-object-meta{
-            padding-top: $loose-padding;
-            padding-bottom: $loose-padding;
-            @include media-breakpoint-up(md){
-                padding-top: $loose-padding;
-                padding-bottom: $loose-padding;
-            }
-            @include media-breakpoint-up(lg){
-                padding-top: $loose-padding-lg;
-                padding-bottom: $loose-padding-lg;
-            }
+            @include module-padding-y-only($loose-padding, $loose-padding-lg);
         }
+    }
+}
+
+//bottom only options
+//tight
+//module
+[data-objectspacing="tight-bottom"],
+.spacing-loose-y {
+    @include module-padding-bottom-only($tight-padding, $tight-padding-lg)
+}
+//heading
+[data-metaspacing="tight-bottom"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            @include module-padding-bottom-only($tight-padding, $tight-padding-lg)
+        }
+    }
+}
+//content
+[data-contentspacing="tight-bottom"]{
+    > div.mura-object-content{
+        @include module-padding-bottom-only($tight-padding, $tight-padding-lg)
+    }
+}
+
+//normal
+//module
+[data-objectspacing="normal-bottom"],
+.spacing-loose-y {
+    @include module-padding-bottom-only($normal-padding, $normal-padding-lg)
+}
+//heading
+[data-metaspacing="normal-bottom"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            @include module-padding-bottom-only($normal-padding, $normal-padding-lg)
+        }
+    }
+}
+//content
+[data-contentspacing="normal-bottom"]{
+    > div.mura-object-content{
+        @include module-padding-bottom-only($normal-padding, $normal-padding-lg)
+    }
+}
+
+//loose
+//module
+[data-objectspacing="loose-bottom"],
+.spacing-loose-y {
+    @include module-padding-bottom-only($loose-padding, $loose-padding-lg)
+}
+//heading
+[data-metaspacing="loose-bottom"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            @include module-padding-bottom-only($loose-padding, $loose-padding-lg)
+        }
+    }
+}
+//content
+[data-contentspacing="loose-bottom"]{
+    > div.mura-object-content{
+        @include module-padding-bottom-only($loose-padding, $loose-padding-lg)
+    }
+}
+
+//top only options
+//tight
+//module
+[data-objectspacing="tight-top"],
+.spacing-loose-y {
+    @include module-padding-top-only($tight-padding, $tight-padding-lg)
+}
+//heading
+[data-metaspacing="tight-top"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            @include module-padding-top-only($tight-padding, $tight-padding-lg)
+        }
+    }
+}
+//content
+[data-contentspacing="tight-top"]{
+    > div.mura-object-content{
+        @include module-padding-top-only($tight-padding, $tight-padding-lg)
+    }
+}
+
+//normal
+//module
+[data-objectspacing="normal-top"],
+.spacing-loose-y {
+    @include module-padding-top-only($normal-padding, $normal-padding-lg)
+}
+//heading
+[data-metaspacing="normal-top"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            @include module-padding-top-only($normal-padding, $normal-padding-lg)
+        }
+    }
+}
+//content
+[data-contentspacing="normal-top"]{
+    > div.mura-object-content{
+        @include module-padding-top-only($normal-padding, $normal-padding-lg)
+    }
+}
+
+//loose
+//module
+[data-objectspacing="loose-top"],
+.spacing-loose-y {
+    @include module-padding-top-only($loose-padding, $loose-padding-lg)
+}
+//heading
+[data-metaspacing="loose-top"]{
+    > div.mura-object-meta-wrapper{
+        > div.mura-object-meta{
+            @include module-padding-top-only($loose-padding, $loose-padding-lg)
+        }
+    }
+}
+//content
+[data-contentspacing="loose-top"]{
+    > div.mura-object-content{
+        @include module-padding-top-only($loose-padding, $loose-padding-lg)
     }
 }
 
