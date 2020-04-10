@@ -360,3 +360,101 @@ div[data-object="container"]:not(.mura-objectclass){
         }
     }
 }
+
+.module-equal-height-icons{
+    [data-object="image"]{
+        figure{
+            img{
+                max-height:100px;
+                width:auto;
+                margin-left:0;
+                margin-right:auto;
+                display:block;
+                margin-bottom:2rem;
+            }
+        }
+    }
+    [data-object="text"]{
+        .mura-object-content{
+            img{
+                max-height:100px;
+                width:auto;
+                margin-left:0;
+                margin-right:auto;
+                display:block;
+                margin-bottom:2rem;
+            }
+        }
+    }
+    &-lg{
+        [data-object="image"]{
+            figure{
+                img{
+                    max-height:150px;
+                    width:auto;
+                    margin-left:0;
+                    margin-right:auto;
+                    display:block;
+                    margin-bottom:3rem;
+                }
+            }
+        }
+        [data-object="text"]{
+            .mura-object-content{
+                img{
+                    max-height:150px;
+                    width:auto;
+                    margin-left:0;
+                    margin-right:auto;
+                    display:block;
+                    margin-bottom:3rem;
+                }
+            }
+        }
+    }
+    &-xl{
+        [data-object="image"]{
+            figure{
+                img{
+                    max-height:220px;
+                    width:auto;
+                    margin-left:0;
+                    margin-right:auto;
+                    display:block;
+                    margin-bottom:5rem;
+                }
+            }
+        }
+        [data-object="text"]{
+            .mura-object-content{
+                img{
+                    max-height:220px;
+                    width:auto;
+                    margin-left:0;
+                    margin-right:auto;
+                    display:block;
+                    margin-bottom:5rem;
+                }
+            }
+        }
+    }
+}
+
+.module-center-icons{
+    [data-object="image"]{
+        figure{
+            img{
+                margin-right:auto;
+                margin-left:auto;
+            }
+        }
+    }
+    [data-object="text"]{
+        .mura-object-content{
+            img{
+                margin-right:auto;
+                margin-left:auto;
+            }
+        }
+    }
+}

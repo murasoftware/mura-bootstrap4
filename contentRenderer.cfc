@@ -106,7 +106,11 @@
 			{name="White",value="module-white"},
 			{name="Horizontal Nav",value="module-horizontal-nav"},
 			{name="Image Grid",value="module-image-grid"},
-			{name="Big Header",value="module-big-header"}
+			{name="Big Header",value="module-big-header"},
+			{name="Equal Height Icons (100px)",value="module-equal-height-icons"},
+			{name="Equal Height Icons LG (150px)",value="module-equal-height-icons-lg"},
+			{name="Equal Height Icons XL (220px)",value="module-equal-height-icons-xl"},
+			{name="Center Icons",value="module-center-icons"}
         ];
 		this.coloroptions=[
             {name='White',value="##ffffff"},
