@@ -110,7 +110,11 @@
 			{name="Equal Height Icons (100px)",value="module-equal-height-icons"},
 			{name="Equal Height Icons LG (150px)",value="module-equal-height-icons-lg"},
 			{name="Equal Height Icons XL (220px)",value="module-equal-height-icons-xl"},
-			{name="Center Icons",value="module-center-icons"}
+			{name="Center Icons",value="module-center-icons"},
+			{name="Layout Items 40/60",value="module-layout-40-60"},
+			{name="Layout Items 50/50",value="module-layout-50-50"},
+			{name="Layout Items 60/40",value="module-layout-60-40"},
+			{name="Layout Items Thirds",value="module-layout-thirds"},
         ];
 		this.coloroptions=[
             {name='White',value="##ffffff"},

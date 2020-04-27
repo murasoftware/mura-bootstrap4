@@ -458,3 +458,87 @@ div[data-object="container"]:not(.mura-objectclass){
         }
     }
 }
+
+.module-layout-40-60{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(40% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(60% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }
+                &:nth-child(n+3){
+                    margin-top:$normal-padding-lg;
+                }
+            }          
+        }
+    }
+}
+
+.module-layout-50-50{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(50% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(50% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }
+                &:nth-child(n+3){
+                    margin-top:$normal-padding-lg;
+                }
+            }          
+        }
+    }
+}
+
+.module-layout-60-40{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(60% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(40% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }
+                &:nth-child(n+3){
+                    margin-top:$normal-padding-lg;
+                }
+            }          
+        }
+    }
+}
+
+.module-layout-thirds{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(33.33333333% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(33.33333333% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }                
+                &:nth-child(n+4){
+                    margin-top:$normal-padding-lg;
+                }
+            }
+        }
+    }
+}
