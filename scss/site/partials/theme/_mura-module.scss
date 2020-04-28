@@ -480,27 +480,6 @@ div[data-object="container"]:not(.mura-objectclass){
     }
 }
 
-.module-layout-50-50{
-    > .mura-object-content{
-        justify-content: space-between !important;
-        > .mura-object{
-            @include media-breakpoint-up(lg){
-                width:calc(50% - #{$normal-padding-lg / 2}) !important;
-            }
-            + .mura-object{
-                //margin-top:$normal-padding;
-                @include media-breakpoint-up(lg){
-                    width:calc(50% - #{$normal-padding-lg / 2}) !important;
-                    margin-top:0;
-                }
-                &:nth-child(n+3){
-                    margin-top:$normal-padding-lg;
-                }
-            }          
-        }
-    }
-}
-
 .module-layout-60-40{
     > .mura-object-content{
         justify-content: space-between !important;
@@ -522,7 +501,28 @@ div[data-object="container"]:not(.mura-objectclass){
     }
 }
 
-.module-layout-thirds{
+.module-layout-two-col{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(50% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(50% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }
+                &:nth-child(n+3){
+                    margin-top:$normal-padding-lg;
+                }
+            }          
+        }
+    }
+}
+
+.module-layout-three-col{
     > .mura-object-content{
         justify-content: space-between !important;
         > .mura-object{
@@ -536,6 +536,65 @@ div[data-object="container"]:not(.mura-objectclass){
                     margin-top:0;
                 }                
                 &:nth-child(n+4){
+                    margin-top:$normal-padding-lg;
+                }
+            }
+        }
+    }
+}
+
+.module-layout-four-col{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(25% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(25% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }                
+                &:nth-child(n+5){
+                    margin-top:$normal-padding-lg;
+                }
+            }
+        }
+    }
+}
+
+.module-layout-five-col{
+    &.mura-object[data-instanceid]{
+        > div.mura-object-content{
+            justify-content: space-between !important;
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, calc(20% - #{$normal-padding-lg / 1.42857143}));
+            > .mura-object{
+                + .mura-object{             
+                    &:nth-child(n+6){
+                        margin-top:$normal-padding-lg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.module-layout-six-col{
+    > .mura-object-content{
+        justify-content: space-between !important;
+        > .mura-object{
+            @include media-breakpoint-up(lg){
+                width:calc(16.666666666% - #{$normal-padding-lg / 2}) !important;
+            }
+            + .mura-object{
+                //margin-top:$normal-padding;
+                @include media-breakpoint-up(lg){
+                    width:calc(16.666666666% - #{$normal-padding-lg / 2}) !important;
+                    margin-top:0;
+                }                
+                &:nth-child(n+7){
                     margin-top:$normal-padding-lg;
                 }
             }

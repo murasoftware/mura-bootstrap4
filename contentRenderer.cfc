@@ -112,9 +112,12 @@
 			{name="Equal Height Icons XL (220px)",value="module-equal-height-icons-xl"},
 			{name="Center Icons",value="module-center-icons"},
 			{name="Layout Items 40/60",value="module-layout-40-60"},
-			{name="Layout Items 50/50",value="module-layout-50-50"},
 			{name="Layout Items 60/40",value="module-layout-60-40"},
-			{name="Layout Items Thirds",value="module-layout-thirds"},
+			{name="Layout Items 2 Columns",value="module-layout-two-col"},
+			{name="Layout Items 3 Columns",value="module-layout-three-col"},
+			{name="Layout Items 4 Columns",value="module-layout-four-col"},
+			{name="Layout Items 5 Columns",value="module-layout-five-col"},
+			{name="Layout Items 6 Columns",value="module-layout-six-col"}
         ];
 		this.coloroptions=[
             {name='White',value="##ffffff"},
