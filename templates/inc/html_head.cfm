@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="#Mura.siteConfig('themeAssetPath')#/css/site.css">
 
 	<!--- jQuery --->
-	<script src="#Mura.siteConfig('themeAssetPath')#/js/libraries/jquery-3.3.1.min.js"></script>
+	<script src="#Mura.siteConfig('themeAssetPath')#/js/libraries/jquery-3.5.1.min.js"></script>
 
 	<!--- FAV AND TOUCH ICONS --->
 	<link rel="shortcut icon" href="#Mura.globalConfig('corePath')#/modules/v1/core_assets/images/favicon.ico">
