@@ -233,9 +233,9 @@
 		this.formRequiredWrapperClass="";
 		this.formButtonSubmitClass = "form-submit btn btn-primary";
 		this.formButtonSubmitLabel = "Submit";
-		this.formButtonNextClass = "form-nav";
+		this.formButtonNextClass = "form-nav btn";
 		this.formButtonNextLabel = "Next";
-		this.formButtonBackClass = "form-nav";
+		this.formButtonBackClass = "form-nav btn";
 		this.formButtonBackLabel = "Back";
 		this.formButtonCancelLabel = "Cancel";
 		this.formButtonCancelClass = "form-cancel btn btn-danger";
