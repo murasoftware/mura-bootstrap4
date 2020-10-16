@@ -7,7 +7,7 @@
 	<meta name="keywords" content="#esapiEncode('html_attr', Mura.content('metaKeywords'))#">
 	<cfif len(Mura.content('credits'))><meta name="author" content="#esapiEncode('html_attr', Mura.content('credits'))#"></cfif>
 	<cfif YesNoFormat(Mura.content('searchExclude'))><meta name="robots" content="noindex"></cfif>
-	<meta name="generator" content="Mura CMS #Mura.globalConfig('version')#">
+	<meta name="generator" content="Mura #Mura.globalConfig('version')#">
 
 	<title>#esapiEncode('html', Mura.content('HTMLTitle'))# - #esapiEncode('html', Mura.siteConfig('site'))#</title>
 
@@ -15,8 +15,8 @@
 	<cfset canonicalURL = len(Mura.content('canonicalURL')) ? Mura.content('canonicalURL') : Mura.getURL(complete='true')>
 	<link rel="canonical" href="#canonicalURL#"/>
 
-	<!--- Mura CMS Base Styles--->
-	<!--- Optional: Mura CMS Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
+	<!--- Mura Base Styles--->
+	<!--- Optional: Mura Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
 	#Mura.outputMuraCSS(version="10", includeskin=true)#
 
 	<!--- Bootstrap core CSS --->
