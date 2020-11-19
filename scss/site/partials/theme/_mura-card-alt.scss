@@ -1,0 +1,37 @@
+.card-alt{
+    .card-body{
+        border:1px solid $gray-300;
+        margin:-2rem 2rem 0 2rem;
+        // background-color:$white;
+        position:relative;
+        z-index:2;
+        transition:all .15s;
+        &:after{
+            display:block;
+            height:3px;
+            position:absolute;
+            bottom:-4px;//2px for the height and 1px for the card-body border
+            background-color:$primary;
+            content:'';
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .mura-item-meta{
+            &__title{
+                a{
+                    &:hover{
+                        text-decoration:none;
+                    }
+                }
+            }
+        }
+        @each $key, $val in $colors {
+            &.border-bottom_#{$key}{
+                &:after { 
+                    background-color:$val;
+                }
+            }            
+        }
+    }
+}
