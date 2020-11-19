@@ -1,0 +1,60 @@
+.mura-collection{
+    &.collapsible-nav{
+        .navbar{
+            padding:0;
+            @include media-breakpoint-down(md){
+                background-color:$primary;
+            }
+            .navbar-nav{
+                @include media-breakpoint-up(lg){
+                    flex-wrap:wrap;
+                }
+                .nav{
+                    &-link{
+                        font-weight:$font-weight-bold;
+                        color:$primary;//not a brand color
+                        &:hover{
+                            color:$secondary;
+                        }
+                    }
+                }
+            }
+            .navbar-collapse{
+                @include media-breakpoint-down(md){
+                    background-color:$white;
+                    border:1px solid $gray-300;
+                    border-top:0;
+                    .nav{
+                        &-item{
+                            border-top:1px solid $gray-300;
+                        }
+                        &-link{
+                            padding:1rem;
+                        }
+                    }
+                }
+            }
+            .navbar-toggler{
+                outline:none;
+                border:0;
+                position:relative;
+                width:100% !important;
+                color:$white;
+                padding-top:2rem;
+                padding-bottom:2rem;
+                padding-right:4.5rem;
+                &:after{
+                    content: "\f054";
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    position:absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    right:1rem;
+                    font-size:110%;
+                    color:$white;
+                }
+            }
+        }        
+    }
+}
