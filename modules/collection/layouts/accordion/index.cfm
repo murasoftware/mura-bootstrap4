@@ -3,8 +3,11 @@
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
 	<cfparam name="objectParams.modalimages" default="false">
-	<cfparam name="objectParams.scrollpages" default="false">
 	<cfparam name="objectParams.bgStyle" default="">
+	<cfparam name="objectParams.accordionPadding" default="loose">
+	<cfparam name="objectParams.scrollpages" default="false">
+	<cfparam name="objectParams.collapseIndicators" default="chevrons">
+	<cfparam name="objectParams.collapseIndicatorsLocation" default="right">
 
 	<cfset imageSizeArgs={
 		size=objectParams.imageSize,
@@ -15,17 +18,17 @@
 
 <cfoutput>
 	<div class="mura-collection">
-		<div class="accordion" id="rapidsAccordion">
+		<div class="accordion #esapiencode('html_attr',objectParams.collapseIndicatorsLocation)#-indicator #esapiencode('html_attr',objectParams.accordionPadding)#-spacing #esapiencode('html_attr',objectParams.collapseIndicators)#" id="accordion-#objectparams.instanceid#">
 		<cfloop condition="iterator.hasNext()">
 			<cfsilent>
 				<cfset item=iterator.next()>
 			</cfsilent>
 			<div class="card">
 				<div class="card-header p-0 #objectParams.bgStyle#" id="##content-#item.getContentID()#">
-					<a href="##" class="h5 m-0 d-block p-5 text-reset collapsed" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</a>
+					<a href="##" class="h5 m-0 d-block text-reset collapsed" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</a>
 				</div>
 				
-				<div id="content-#item.getContentID()#" class="collapse" aria-labelledby="##content-#item.getContentID()#" data-parent="##rapidsAccordion">
+				<div id="content-#item.getContentID()#" class="collapse" aria-labelledby="##content-#item.getContentID()#" data-parent="##accordion-#objectparams.instanceid#">
 					<div class="card-body px-5"> <!--- #objectParams.bgStyle# ---> <!--- #item.getValue('CardBackgroundStyle')# --->
 							<cfif listFindNoCase(objectParams.displaylist,'Image')>
 								<div class="mura-item-content">
@@ -56,7 +59,7 @@
 		iterator=iterator,
 		nextN=iterator.getNextN(),
 		source=objectParams.source,
-		objectparams=objectParams
+		objectParams=objectParams
 	)#
 
 	<cfif len(objectParams.viewalllink)>
