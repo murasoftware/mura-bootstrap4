@@ -152,10 +152,10 @@
 
 		// headings
 		this.headline = "h1";
-		this.subHead1 = "h2";
-		this.subHead2 = "h3";
-		this.subHead3 = "h4";
-		this.subHead4 = "h5";
+		this.subHead1 = "h1";
+		this.subHead2 = "h2";
+		this.subHead3 = "h3";
+		this.subHead4 = "h4";
 
 		// preloader markup for async objects
 		this.preloaderMarkup='<div class="mura-preloader-wrapper container"><div class="mura-preloader fa fa-refresh fa-spin"><span></span></div></div>';
