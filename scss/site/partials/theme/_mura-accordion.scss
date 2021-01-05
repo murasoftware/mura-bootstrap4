@@ -1,24 +1,95 @@
 .accordion{
-    a{
-        position:relative;
-        &[data-toggle="collapse"]:before {   
-            content: "\f077";
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position:absolute;
-            top:50%;
-            transform: translateY(-50%);
-            right:30px;
-            font-size:110%;
+    .card-header{
+        a{
+            padding:3rem;
+            position:relative;
+            font-style: normal;
+            &[data-toggle="collapse"]:before {   
+                content: "\f077";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                position:absolute;
+                top:50%;
+                transform: translateY(-50%);
+                right:30px;
+                font-size:110%;
+            }
+            &[data-toggle="collapse"].collapsed:before {
+                content: "\f078";
+            }        
+            &:hover{
+                text-decoration: none;
+                transition: all .3s ease;
+                -webkit-transition: all .3s ease;
+            }
         }
-        &[data-toggle="collapse"].collapsed:before {
-            content: "\f078";
-        }        
-        &:hover{
-            //background: rgba(0,0,0,.05);
-            text-decoration: none;
-            transition: all .3s ease;
-            -webkit-transition: all .3s ease;
+    }
+    &.left-indicator{
+        .card-header{
+            a{
+                padding-left: calc(3rem + 30px);
+                &[data-toggle="collapse"]:before {   
+                    right:auto;
+                    left:30px;
+                }
+            }
+        }
+        &.tight-spacing{
+            .card-header{
+                a{
+                    padding-left: calc(#{$tight-padding} + 50px);
+                    &[data-toggle="collapse"]:before {
+                        left:20px;
+                    }
+                }
+            }
+        }
+        &.normal-spacing{
+            .card-header{
+                a{
+                    padding-left: calc(#{$normal-padding} + 50px);
+                }
+            }
+        }
+        &.loose-spacing{
+            .card-header{
+                a{
+                    padding-left: calc(#{$loose-padding} + 50px);
+                }
+            }
+        }
+    }
+    &.tight-spacing{
+        .card-header{
+            a{
+                padding:$tight-padding;
+            }
+        }
+    }
+    &.normal-spacing{
+        .card-header{
+            a{
+                padding:$normal-padding;
+            }
+        }
+    }
+    &.loose-spacing{
+        .card-header{
+            a{
+                padding:$loose-padding;
+            }
+        }
+    }
+    &.plus-min{
+        .card-header{
+            a{
+                &[data-toggle="collapse"]:before {   
+                        content: "\f068";
+                }
+                &[data-toggle="collapse"].collapsed:before {
+                    content: "\f067";
+                }
+            } 
         }
     }
 }

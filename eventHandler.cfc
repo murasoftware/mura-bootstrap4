@@ -71,7 +71,6 @@
 			try {
 				arguments.Mura.loadPrettify();
 			} catch(any e) {
-				// Mura CMS version is probably older than 6.1
 			}
 		</cfscript>
 	</cffunction> --->
