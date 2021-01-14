@@ -25,7 +25,7 @@
 			</cfsilent>
 			<div class="card">
 				<div class="card-header p-0 #objectParams.bgStyle#" id="##content-#item.getContentID()#">
-					<a href="##" class="h5 m-0 d-block text-reset collapsed" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</a>
+					<a href="##" class="h5 m-0 d-block text-reset collapsed" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#" role="button">#item.getTitle()#</a>
 				</div>
 				
 				<div id="content-#item.getContentID()#" class="collapse" aria-labelledby="##content-#item.getContentID()#" data-parent="##accordion-#objectparams.instanceid#">
