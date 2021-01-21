@@ -151,12 +151,12 @@
 						<ul class="#searchResultsPagerClass#">
 						<cfif variables.previous gte 1>
 							<li class="navPrev page-link">
-								<a href="?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.prev')#</a>
+								<a href="?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#" aria-label="Previous page">#variables.Mura.rbKey('search.prev')#</a>
 							</li>
 						</cfif>
 						<cfif session.rsSearch.recordcount gt 0 and variables.through lt session.rsSearch.recordcount>
 							<li class="navNext page-link">
-								<a href="?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.next')#</a>
+								<a href="?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#" aria-label="Next page">#variables.Mura.rbKey('search.next')#</a>
 							</li>
 						</cfif>
 						</ul>
@@ -185,12 +185,12 @@
 						<ul class="#this.searchResultsPagerClass#">
 						<cfif variables.previous gte 1>
 							<li class="navPrev page-link">
-								<a href="./?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.prev')#</a>
+								<a href="./?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#" aria-label="Previous page">#variables.Mura.rbKey('search.prev')#</a>
 							</li>
 						</cfif>
 						<cfif session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount>
 							<li class="navNext page-link">
-								<a href="./?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.next')#</a>
+								<a href="./?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#" aria-label="Next page">#variables.Mura.rbKey('search.next')#</a>
 							</li>
 						</cfif>
 						</ul>
