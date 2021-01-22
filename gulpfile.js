@@ -17,7 +17,7 @@ gulp.task('watch', function() {
 	gulp.watch('scss/**/*.scss', ['scss-theme']);
 });
 
-gulp.task('scss-theme', function() {
+gulp.task('scss-theme', function(done) {
 	gulp.src('scss/site/**/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
@@ -26,6 +26,7 @@ gulp.task('scss-theme', function() {
 		}))
 		.pipe(cssnano())
 		.pipe(gulp.dest('css/'));
+		done();
 });
 
 gulp.task('bootstrap', function() {

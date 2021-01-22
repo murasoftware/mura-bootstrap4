@@ -1,0 +1,101 @@
+.section-container {
+    margin: 24px;
+}
+
+.section-container .mura-group-label {
+    color: #e82425;
+    font-size: 36px;
+    font-weight: 600;
+    width: 20%;
+    margin-bottom: 44px;
+}
+
+.question-id {
+    margin-bottom: 4px;
+    margin-left: 20px;
+}
+
+.question-id > div {
+    color: #E82425;
+    font-size: 32px;
+}
+
+.mura-survey-radio-group {
+    background-color: #fff;
+    box-shadow: 3px 3px #dcdbdb;
+    border: 1px solid #f5f5f5;
+    margin-left: 32px;
+    margin-bottom: 28px;
+}
+.mura-survey-radio-group .mura-group-label {
+    font-size: 36px;
+    color: #666666;
+    margin-left: 32px;
+    margin-top: 40px;
+    margin-right: 28px;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.mura-survey-radio-group .mura-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mura-survey-radio:nth-of-type(1) {
+    margin-left: 60px;
+}
+
+.mura-survey-radio {
+    color:black;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 32px;
+    align-content: space-between;
+    margin-bottom: 24px;
+}
+
+.mura-survey-radio > label {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.mura-survey-radio > input {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.mura-survey-button-get-score {
+    background-color: #E82425;
+    border-radius: 28px;
+    border: 1px solid #E82425;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 54px;
+    text-decoration: none;
+    margin-bottom: 44px;
+}
+
+.mura-survey-score-result {
+    background-color: #fff;
+    box-shadow: 3px 3px #dcdbdb;
+    border: 1px solid #f5f5f5;
+    margin-left: 32px;
+    margin-bottom: 28px;
+}
+
+.mura-survey-score-result > div {
+    margin: auto;
+    width: 50%;
+    margin-bottom: 24px;
+    color: #E82425;
+    font-size: 32px;
+    text-align: center;
+}
