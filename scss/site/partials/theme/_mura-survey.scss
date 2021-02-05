@@ -5,14 +5,14 @@
 .section-container .mura-group-label {
     color: #e82425;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 500;
     width: 20%;
     margin-bottom: 44px;
 }
 
 .question-id {
     margin-bottom: 4px;
-    margin-left: 20px;
+    margin-left: 36px;
 }
 
 .question-id > div {
@@ -22,10 +22,10 @@
 
 .mura-survey-radio-group {
     background-color: #fff;
-    box-shadow: 3px 3px #dcdbdb;
+    box-shadow: 3px 3px #dcdbdb, -1px 0 0.4em #dcdbdb;
     border: 1px solid #f5f5f5;
-    margin-left: 32px;
-    margin-bottom: 28px;
+    margin-left: 28px;
+    margin-bottom: 32px;
 }
 .mura-survey-radio-group .mura-group-label {
     font-size: 36px;
@@ -52,7 +52,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 32px;
+    margin-left: 64px;
     align-content: space-between;
     margin-bottom: 24px;
 }
@@ -61,6 +61,8 @@
     margin: 0;
     margin-bottom: 8px;
     font-size: 16px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .mura-survey-radio > input {
