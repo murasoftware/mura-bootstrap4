@@ -59,15 +59,26 @@
 
 .mura-survey-radio > label {
     margin: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
+    margin-bottom: 16px;
+    font-size: 1.0em;
+    width: 1.0em;
+    height: 1.0em;
     font-weight: 600;
     text-align: center;
+    /*
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 1.0em;
+    width: 1.0em;
+    height: 1.0em;
+    */
 }
 
 .mura-survey-radio > input {
     margin: 0;
     margin-bottom: 8px;
+    width: 1.0em;
+    height: 1.0em;
 }
 
 .mura-survey-button-get-score {
