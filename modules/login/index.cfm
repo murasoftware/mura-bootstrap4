@@ -1,3 +1,9 @@
+<cfset providersAdded=$.getFeed('oauthProvider').setSiteID($.siteConfig().getSiteId()).getIterator()>
+<cfset providersAddedList = ""/>
+<cfloop condition="providersAdded.hasNext()">
+    <cfset providerAdded=providersAdded.next()>
+    <cfset providersAddedList = listAppend(providersAddedList, providerAdded.getName())/>
+</cfloop>
 <cfif not isBoolean(variables.Mura.event('isBlocked'))>
 	<cfset variables.Mura.event('isBlocked',false)>
 </cfif>
@@ -98,21 +104,36 @@
 				<cfelse>
 					<form role="form" id="login" class="mura-login-form #this.loginFormClass# <cfif this.formWrapperClass neq "">#this.formWrapperClass#</cfif>" name="frmLogin" method="post" novalidate="novalidate">
 
-						<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google') or listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook') >
+							<cfif listFindNoCase(providersAddedList, 'google') or
+								listFindNoCase(providersAddedList, 'facebook') or
+								listFindNoCase(providersAddedList, 'github') or
+								listFindNoCase(providersAddedList, 'microsoft')>
 								<div class="#this.loginFormGroupWrapperClass# w-100">
 									<div class="#this.loginFormSubmitWrapperClass# w-100">
 										<div class="mura-login-auth-wrapper w-100 text-center">
 										<!--- Use Google oAuth Button --->
-										<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google')>
-											<a href="#Mura.getBean('googleLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.Mura.rbKey('login.loginwithgoogle')#" class="mura-login-auth-btn ggl">
+										<cfif listFindNoCase(providersAddedList, 'google')>
+											<a href="#$.getBean('googleLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.$.rbKey('login.loginwithgoogle')#" class="mura-login-auth-btn ggl">
 												<i class="fab fa-1x fa-google mi-google"></i>
-												<span>#variables.Mura.rbKey('login.loginwithgoogle')#</span>
+												<span>#variables.$.rbKey('login.loginwithgoogle')#</span>
 											</a>
 										</cfif>
-										<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook')>
-											<a href="#Mura.getBean('facebookLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.Mura.rbKey('login.loginwithfacebook')#" class="mura-login-auth-btn fb">
-					               	<i class="fab fa-1x fa-facebook mi-facebook"></i>
-			                  	<span>#variables.Mura.rbKey('login.loginwithfacebook')#</span>
+										<cfif listFindNoCase(providersAddedList, 'facebook')>
+											<a href="#$.getBean('facebookLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.$.rbKey('login.loginwithfacebook')#" class="mura-login-auth-btn fb">
+								               	<i class="fab fa-1x fa-facebook mi-facebook"></i>
+						                  		<span>#variables.$.rbKey('login.loginwithfacebook')#</span>
+			 									</a>
+										</cfif>
+										<cfif listFindNoCase(providersAddedList, 'github')>
+											<a href="#$.getBean('githubLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.$.rbKey('login.loginwithgithub')#" class="mura-login-auth-btn gh">
+								               	<i class="fab fa-1x fa-github mi-github"></i>
+						                  		<span>#variables.$.rbKey('login.loginwithgithub')#</span>
+			 									</a>
+										</cfif>
+										<cfif listFindNoCase(providersAddedList, 'microsoft')>
+											<a href="#$.getBean('microsoftLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.$.rbKey('login.loginwithmicrosoft')#" class="mura-login-auth-btn ms">
+								               	<i class="fab fa-1x fa-microsoft mi-microsoft"></i>
+						                  		<span>#variables.$.rbKey('login.loginwithmicrosoft')#</span>
 			 									</a>
 										</cfif>
 									</div>
@@ -121,7 +142,10 @@
 						</cfif>
 
 						<div>
-							<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google') or listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook') >
+							<cfif listFindNoCase(providersAddedList, 'google') or
+								listFindNoCase(providersAddedList, 'facebook') or
+								listFindNoCase(providersAddedList, 'github') or
+								listFindNoCase(providersAddedList, 'microsoft')>
 			              <div class="text-divider"><span>#variables.Mura.rbKey('login.or')#</span></div>
 										<h3 class="text-center">#variables.Mura.rbKey('login.loginwithcredentials')#</h3>
 
