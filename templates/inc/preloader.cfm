@@ -1,3 +1,4 @@
+<!---
 <cfoutput>
     <!-- PRELOADER -->
     <div id="preloader">
@@ -8,3 +9,4 @@
     </div>
     <!-- /PRELOADER -->
 </cfoutput>
+--->
