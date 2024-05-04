@@ -723,7 +723,7 @@
 						<cfset kid=kids.next()>
 						<cfif allowLink(kid.getRestricted(),kid.getRestrictGroups(),m.event('r').loggedIn)>
 							<cfset started=true>
-	          	<a class="dropdown-item" href="#kid.getURL()#">#esapiEncode('html',kid.getMenuTitle())#</a>
+	          	<a class="dropdown-item" target="#kid.getTarget()#" href="#kid.getURL()#">#esapiEncode('html',kid.getMenuTitle())#</a>
 						</cfif>
 						</cfloop>
 	        </div>
