@@ -81,6 +81,17 @@
 						</div>
 					</div>
 
+					<!--- Current Password (Mura 10.2+ requires it to change the email or password) --->
+					<cfif session.mura.isloggedin and structKeyExists(application.userManager,'updateSelfServiceProfile')>
+						<div class="#this.editProfileFormGroupWrapperClass#">
+							<label class="#this.editProfileFieldLabelClass#" for="currentPasswordTxt">#variables.Mura.rbKey('user.currentpassword')#</label>
+							<div class="#this.editProfileFormFieldsWrapperClass#">
+								<input class="#this.editProfileFormFieldsClass#" type="password" name="currentPassword" id="currentPasswordTxt" value="" maxlength="50" placeholder="#variables.Mura.rbKey('user.currentpassword')#" autocomplete="current-password" aria-describedby="currentPasswordHelp">
+								<span id="currentPasswordHelp" class="#this.editProfileHelpBlockClass#">#variables.Mura.rbKey('user.currentpasswordhelp')#</span>
+							</div>
+						</div>
+					</cfif>
+
 					<cfif not session.mura.isloggedin>
 						<!--- Email2 (for NEW USER) --->
 						<div class="req #this.editProfileFormGroupWrapperClass#">
